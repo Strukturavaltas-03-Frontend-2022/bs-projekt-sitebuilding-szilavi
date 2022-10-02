@@ -1,11 +1,75 @@
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/static/Catamaran-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(./fonts/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url(./fonts/Mulish/static/Mulish-Light.ttf);
+}
+
+h1,
+.h1 {
+  font-family: "Catamaran", Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+}
+
+footer {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+}
+
+#navbarSupportedContent > ul > li.nav-item > a,
+button {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #a6a6a6;
+}
+
+.btn-outline-light:hover {
+  transition-delay: 0.3s;
+  color: #ffffff;
+  background-color: #fdcc52;
+  border-color: #fdcc52;
+  /* border-color: #f8f9fa; */
+}
+/* #navbarSupportedContent > ul > li.nav-item > a:hover {
+  color: #ffffff !important;
+} */
+
 /* HEADER */
+
+.navbar {
+  background-color: inherit;
+}
+
+.navbar-light .navbar-brand {
+  color: #ffcd01;
+}
+
 .navbar-brand {
-  color: #ffcd01 !important;
+  color: #ffcd01;
   font-size: 2rem;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/* .navbar-brand:hover {
+  color: #ffffff !important;
+} */
+
+.navbar-collapse {
+  flex-grow: 0;
 }
 
 .navbar-toggler {
   font-size: 1rem;
+  font-weight: 900;
 }
 
 .navbar-toggler-icon {
@@ -19,7 +83,7 @@
 
 header {
   background-image: url("./img/bg-pattern.png"), url("./img/bg-pattern.png"),
-    linear-gradient(90deg, rgba(218, 36, 49, 1) 0%, rgba(148, 59, 127, 1) 65%);
+    linear-gradient(90deg, rgba(218, 36, 49, 1) 0%, rgba(122, 67, 151, 1) 65%);
 }
 
 .starNowFree {
@@ -59,11 +123,9 @@ header {
 
 /* MAIN / APPS */
 
-.apps,
-footer {
-  background-color: #ffcd01 !important;
+.apps {
+  background-color: #fdca4a !important;
 }
-
 .discover {
   font-size: 3.5rem;
 }
@@ -75,6 +137,7 @@ footer {
 .googlePlay,
 .appStore {
   width: 300px;
+  cursor: pointer;
 }
 
 /* APP THEM */
@@ -121,6 +184,15 @@ footer {
 }
 
 /* FOOTER */
+
+.social {
+  background-color: rgba(253, 202, 74, 0.9);
+}
+
+.social:hover {
+  background-color: rgba(253, 202, 74, 1);
+}
+
 .fa-heart {
   color: #ff3d41;
 }
@@ -131,4 +203,13 @@ footer h2 {
 
 .privacy {
   background-color: #323232;
+}
+
+.footerModal:hover {
+  cursor: pointer;
+  color: #fdcc52 !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }

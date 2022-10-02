@@ -20,44 +20,66 @@
   <body>
     <header class="pb-5">
       <!-- NAVBAR----------------------------------------------------------------------------------------- -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <a class="navbar-brand font-weight-light" href="#">Start Bootstrap</a>
-        <!-- todo Nem működik a hamburgermenü -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menü
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- todo a háttérszínben a minta halványabb? -->
+      <nav class="navbar navbar-light navbar-expand-lg">
+        <div class="container">
+          <!-- Itt nem volt odaírva, de azért legörgetésnél ez is megtartja a sárga színt, ha rávisszük az egeret -->
+          <a
+            class="navbar-brand font-weight-light"
+            onmouseenter="changeColorGreyBrand(this)"
+            onmouseleave="changeColorYellowBrand(this)"
+            href="#"
+            >Start Bootstrap</a
+          >
+          <!-- én itt raktam rá egy kis vastagságot és meghagytam egy lightos bordert, csak jobban kitűnik így, ha fehérbe átmegy, az meg nem szép -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            Menü
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link text-uppercase" href="#"
-                >Download <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#"
-                >Features <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#"
-                >Contact <span class="sr-only">(current)</span></a
-              >
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-uppercase"
+                  onmouseenter="changeColorWhite(this)"
+                  onmouseleave="changeColorGrey(this)"
+                  href="#apps"
+                  >Download <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-uppercase"
+                  onmouseenter="changeColorWhite(this)"
+                  onmouseleave="changeColorGrey(this)"
+                  href="#features"
+                  >Features <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-uppercase"
+                  onmouseenter="changeColorWhite(this)"
+                  onmouseleave="changeColorGrey(this)"
+                  href="#contact"
+                  >Contact <span class="sr-only">(current)</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <!-- HEADER / PHONE -->
-      <div class="container my-5">
+      <div class="container my-5 pt-5">
         <div class="row d-flex justify-content-center">
           <h1 class="text-center text-white font-weight-light mt-5">
             New Age is an app landing page that will help you beatifully
@@ -78,7 +100,7 @@
     </header>
     <main>
       <!-- APPS -->
-      <section class="py-5 apps">
+      <section class="py-5 apps" id="apps">
         <h2
           class="h1 text-center text-dark font-weight-normal mt-5 col-10 offset-1 discover"
         >
@@ -90,21 +112,33 @@
               Our app is avilable on any mobile device! Download noew to get
               started!
             </p>
-            <img
-              class="googlePlay mb-5 align-self-center"
-              src="/assets/img/google-play-badge.svg"
-              alt=""
-            />
-            <img
-              class="appStore align-self-center"
-              src="/assets/img/app-store-badge.svg"
-              alt=""
-            />
+            <a
+              href="https://play.google.com/store/games"
+              target="_blank"
+              class="align-self-center"
+            >
+              <img
+                class="googlePlay mb-5 align-self-center"
+                src="./assets/img/google-play-badge.svg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.apple.com/hu/app-store/"
+              target="_blank"
+              class="align-self-center"
+            >
+              <img
+                class="appStore"
+                src="./assets/img/app-store-badge.svg"
+                alt=""
+              />
+            </a>
           </div>
         </div>
       </section>
       <!-- FEATURES -->
-      <section class="py-5">
+      <section class="py-5" id="features">
         <h2
           class="h1 text-center font-weight-normal mt-5 col-8 offset-2 mb-4 unlimited"
         >
@@ -168,6 +202,8 @@
           </div>
         </div>
       </section>
+      <!-- STOP WAITING -->
+      <!-- todo itt még a képen nagyobb felbontásban dolgozni kell -->
       <section
         class="mt-5 py-5 stopWaiting d-flex flex-column justify-content-center"
       >
@@ -181,41 +217,226 @@
           Let's get started!
         </button>
       </section>
+      <!-- SOCIAL -->
+      <section class="social">
+        <!-- itt nem értettem, hogy az ikonoknak, vagy a bg-nek kell az opacityt kell 90%-ra rakni, ezért a bg-t csináltam,
+          azt tálán kicsit csavarosabb volt megcsinálni (azért azt sem nagyon, csak rgba-ból kellett megközelíteni a dolgot :) -->
+        <h2 class="h1 font-weight-light text-center py-5">
+          We <i class="fa-solid fa-heart"></i> new friends!
+        </h2>
+        <div class="container d-flex justify-content-center pb-5">
+          <a
+            href="https://twitter.com/home"
+            target="_blank"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Twitter"
+          >
+            <img
+              class="brands bands-twitter"
+              src="./assets/pluszSvg/cdnlogo.com_twitter-icon.svg"
+              alt=""
+              height="100"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Facebook"
+          >
+            <img
+              class="brands bands-facebook mx-3"
+              src="./assets/pluszSvg/cdnlogo.com_facebook.svg"
+              alt=""
+              height="100"
+            />
+          </a>
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Google +"
+            id="social"
+          >
+            <img
+              class="brands bands-google rounded-circle"
+              src="./assets/pluszSvg/cdnlogo.com_google-plus.svg"
+              alt=""
+              height="100"
+            />
+          </a>
+        </div>
+      </section>
     </main>
-    <footer>
-      <h2 class="h1 font-weight-light text-center py-5">
-        We <i class="fa-solid fa-heart"></i> new friends!
-      </h2>
-      <div class="container d-flex justify-content-center mb-5 pb-5">
-        <img
-          class="brands bands-twitter"
-          src="./assets/pluszSvg/cdnlogo.com_twitter-icon.svg"
-          alt=""
-          height="100"
-        />
-        <img
-          class="brands bands-facebook mx-3"
-          src="./assets/pluszSvg/cdnlogo.com_facebook.svg"
-          alt=""
-          height="100"
-        />
-        <img
-          class="brands bands-google rounded-circle"
-          src="./assets/pluszSvg/cdnlogo.com_google-plus.svg"
-          alt=""
-          height="100"
-        />
-      </div>
+    <!-- FOOTER -->
+    <footer id="contact">
       <div class="py-4 privacy">
         <p class="text-center text-muted">
           © Your Website 2018. All Rights Reserved.
         </p>
         <div class="container d-flex justify-content-center mb-3">
-          <p class="text-muted">Privacy</p>
-          <p class="text-muted mx-4">Terms</p>
-          <p class="text-muted">FAQ</p>
+          <a
+            class="text-muted footerModal footerModal__privacy"
+            data-toggle="modal"
+            data-target="#privacyModal"
+            >Privacy</a
+          >
+          <a
+            class="text-muted mx-4 footerModal footerModal__terms"
+            data-toggle="modal"
+            data-target="#termsModal"
+            >Terms</a
+          >
+          <a
+            class="text-muted footerModal footerModal__faq"
+            data-toggle="modal"
+            data-target="#faqModal"
+            >FAQ</a
+          >
         </div>
       </div>
     </footer>
+    <!-- MODAL -->
+    <!-- privacy -->
+    <div
+      class="modal fade"
+      id="privacyModal"
+      tabindex="-1"
+      aria-labelledby="privacyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">Privacy</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Bezárás"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+            quae mollitia soluta quam quasi qui eligendi, iusto ex esse quis non
+            at tenetur suscipit iste. Ipsum delectus minima consequuntur
+            debitis.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Bezárás
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Terms -->
+    <div
+      class="modal fade"
+      id="termsModal"
+      tabindex="-1"
+      aria-labelledby="termsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel">Terms</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Bezárás"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            totam illo quasi perferendis a sapiente, sunt architecto cum eveniet
+            impedit ullam quibusdam eligendi quis ad saepe rem sit. Numquam,
+            dicta.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Bezárás
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- faq -->
+    <div
+      class="modal fade"
+      id="faqModal"
+      tabindex="-1"
+      aria-labelledby="faqModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="faqModalLabel">FAQ</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Bezárás"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A nam
+            officiis qui, exercitationem laudantium earum. Rerum, eius fugiat
+            hic unde laudantium cum blanditiis, laboriosam illum ex possimus
+            dolore labore vel.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Bezárás
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTEK -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/main.js"></script>
+    <script>
+      $('[data-toggle="tooltip"]').tooltip();
+    </script>
   </body>
+  <!-- todo Marhára nincs a scrolling beállítva -->
 </html>
