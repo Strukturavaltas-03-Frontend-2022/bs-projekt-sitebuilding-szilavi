@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Sitebuilding</title>
   </head>
+  <!-- FONTOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- NEM BIZTOS, HOGY MINDENT ÚGY ÉRTETTEM, AHOGY LE VOLT ÍRVA, DE HA LEHETŐSÉG VAN RÁ, KÉRLEK JELEZZÉTEK, HA NEM AKARTOK RÁ MAXIMUM PONTOT ADNI,
+  MERT MINDENT KI TUDOK JAVÍTANI, HA KÉRITEK, DE VOLTAK DOLGOK, AMIK SZÁMOMRA NEM VOLTAK TELJESEN ÉRTEHTŐEK. -->
   <body>
     <header class="pb-5">
       <!-- NAVBAR----------------------------------------------------------------------------------------- -->
-      <!-- todo a háttérszínben a minta halványabb? -->
       <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container">
           <!-- Itt nem volt odaírva, de azért legörgetésnél ez is megtartja a sárga színt, ha rávisszük az egeret -->
@@ -113,33 +115,37 @@
           Discover what all the buzz is about!
         </h2>
         <div class="container">
-          <div class="row d-flex flex-column">
-            <p class="my-5 text-center appsParag">
-              Our app is avilable on any mobile device! Download noew to get
-              started!
-            </p>
-            <a
-              href="https://play.google.com/store/games"
-              target="_blank"
-              class="align-self-center"
+          <p class="my-5 text-center appsParag">
+            Our app is avilable on any mobile device! Download noew to get
+            started!
+          </p>
+          <div class="container pb-5">
+            <div
+              class="row flex-column align-content-center flex-lg-row justify-content-lg-center"
             >
-              <img
-                class="googlePlay mb-5 align-self-center"
-                src="./assets/img/google-play-badge.svg"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://www.apple.com/hu/app-store/"
-              target="_blank"
-              class="align-self-center"
-            >
-              <img
-                class="appStore"
-                src="./assets/img/app-store-badge.svg"
-                alt=""
-              />
-            </a>
+              <a
+                class="mb-4 mb-lg-0 mr-lg-4"
+                href="https://play.google.com/store/games"
+                target="_blank"
+              >
+                <img
+                  class="googlePlay"
+                  src="./assets/img/google-play-badge.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://www.apple.com/hu/app-store/"
+                target="_blank"
+                class="pb-5"
+              >
+                <img
+                  class="appStore"
+                  src="./assets/img/app-store-badge.svg"
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -154,62 +160,61 @@
           Check out what you can do with this app theme!
         </h3>
         <hr class="col-2 mb-5" />
-        <div class="mobile py-5">
-          <div class="phone">
-            <div class="phoneScreen"></div>
-          </div>
-        </div>
-        <!-- <hr
-          class="col-5 mb-5"
-          style="
-            color: inherit;
-            height: 0.5px;
-            background: linear-gradient(
-              90deg,
-              rgba(218, 36, 49, 1) 0%,
-              rgba(148, 59, 127, 1) 65%
-            );
-          "
-        /> -->
-        <div class="row d-flex flex-column my-5 py-5">
-          <div
-            class="col-5 col-lg-3 d-flex flex-column text-center mx-auto mb-5"
-          >
-            <i class="fa-solid fa-mobile-screen-button fa-3x featuresIcons"></i>
-            <h4>Device Mocokups</h4>
-            <p class="text-muted">
-              Ready to use HTML/CSS device mockups, no Photoshop required
-            </p>
-          </div>
-          <div
-            class="col-5 col-lg-3 d-flex flex-column text-center mx-auto mb-5"
-          >
-            <i class="fa-solid fa-camera fa-3x featuresIcons"></i>
-            <h4>Flexible Use</h4>
-            <p class="text-muted">
-              Put an image, video, animation, or anything else in the screen!
-            </p>
-          </div>
-          <div
-            class="col-5 col-lg-3 d-flex flex-column text-center mx-auto mb-5"
-          >
-            <i class="fa-solid fa-gift fa-3x featuresIcons"></i>
-            <h4>Free to Use</h4>
-            <p class="text-muted">
-              As always, this theme is free to download and use for and purpose!
-            </p>
-          </div>
-          <div class="col-5 col-lg-3 d-flex flex-column text-center mx-auto">
-            <i class="fa-solid fa-unlock fa-3x featuresIcons"></i>
-            <h4>Open Source</h4>
-            <p class="text-muted">
-              Since this theme is MIT licensed, you can use it commerically!
-            </p>
+        <div class="container">
+          <div class="row flex-column flex-lg-row">
+            <div class="mobile py-5 col-lg-5 justify-content-lg-center">
+              <div class="phone">
+                <div class="phoneScreen"></div>
+              </div>
+            </div>
+            <div
+              class="row d-flex flex-column flex-lg-row my-5 py-5 col-lg-7 p-lg-0"
+            >
+              <div
+                class="col-5 col-lg-6 d-flex flex-column text-center mx-auto mx-lg-0 mb-5 mb-lg-0 mt-lg-5"
+              >
+                <i
+                  class="fa-solid fa-mobile-screen-button fa-3x featuresIcons"
+                ></i>
+                <h4 class="my-4">Device Mocokups</h4>
+                <p class="text-muted">
+                  Ready to use HTML/CSS device mockups, no Photoshop required
+                </p>
+              </div>
+              <div
+                class="col-5 col-lg-6 d-flex flex-column text-center mx-auto mx-lg-0 mb-5 mb-lg-0 mt-lg-5"
+              >
+                <i class="fa-solid fa-camera fa-3x featuresIcons"></i>
+                <h4 class="my-4">Flexible Use</h4>
+                <p class="text-muted">
+                  Put an image, video, animation, or anything else in the
+                  screen!
+                </p>
+              </div>
+              <div
+                class="col-5 col-lg-6 d-flex flex-column text-center mx-auto mx-lg-0 mb-5 mb-lg-0"
+              >
+                <i class="fa-solid fa-gift fa-3x featuresIcons"></i>
+                <h4 class="my-4">Free to Use</h4>
+                <p class="text-muted">
+                  As always, this theme is free to download and use for and
+                  purpose!
+                </p>
+              </div>
+              <div
+                class="col-5 col-lg-6 d-flex flex-column text-center mx-auto mx-lg-0"
+              >
+                <i class="fa-solid fa-unlock fa-3x featuresIcons"></i>
+                <h4 class="my-4">Open Source</h4>
+                <p class="text-muted">
+                  Since this theme is MIT licensed, you can use it commerically!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- STOP WAITING -->
-      <!-- todo itt még a képen nagyobb felbontásban dolgozni kell -->
       <section
         class="mt-5 py-5 stopWaiting d-flex flex-column justify-content-center"
       >
@@ -226,7 +231,8 @@
       <!-- SOCIAL -->
       <section class="social">
         <!-- itt nem értettem, hogy az ikonoknak, vagy a bg-nek kell az opacityt kell 90%-ra rakni, ezért a bg-t csináltam,
-          azt tálán kicsit csavarosabb volt megcsinálni (azért azt sem nagyon, csak rgba-ból kellett megközelíteni a dolgot :) -->
+          azt tálán kicsit csavarosabb volt megcsinálni (azért azt sem nagyon, csak rgba-ból kellett megközelíteni a dolgot :) 
+        + én itt svg-t használtam a logokra, nem nehéz ikonokkal sem, de csak akkor lenne rá szükség, ha csakugyan nem a bg opacityét kell átállítani-->
         <h2 class="h1 font-weight-light text-center py-5">
           We <i class="fa-solid fa-heart"></i> new friends!
         </h2>
@@ -444,5 +450,4 @@
       $('[data-toggle="tooltip"]').tooltip();
     </script>
   </body>
-  <!-- todo Marhára nincs a scrolling beállítva -->
 </html>
